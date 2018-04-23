@@ -38,6 +38,7 @@ public slots:
     qint64 Write(QString msg);
     void Kill();
     bool WaitFinish(int msecs = 30000);
+    bool IsOpen();
 
 
 private:

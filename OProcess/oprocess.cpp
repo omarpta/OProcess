@@ -55,6 +55,16 @@ bool OProcess::WaitFinish(int msecs)
     return process->waitForFinished(msecs);
 }
 
+bool OProcess::IsOpen()
+{
+    if (process != Q_NULLPTR) {
+        return process->isOpen();
+    } else {
+        return false;
+    }
+
+}
+
 void OProcess::log(QString msg)
 {
     QString filename="c:\\temp\\Data.txt";
